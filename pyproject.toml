@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "piscovery"
+version = "0.1.0"
+description = "Pre-engagement reconnaissance tool for web application pentesting"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [{ name = "Leelsey" }]
+keywords = ["pentesting", "reconnaissance", "security", "web"]
+dependencies = ["playwright>=1.40"]
+
+[project.scripts]
+piscovery = "piscovery.__main__:cli"
+
+[tool.setuptools.packages.find]
+include = ["piscovery*"]
